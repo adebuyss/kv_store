@@ -3,9 +3,10 @@ from storage.facade import Capability
 
 
 class DictionaryStorage:
-
     def __init__(self):
-        self.capability = Capability(self, set(['get', 'set', 'delete', 'exists', 'reset']), 'DictionaryStorage')
+        self.capability = Capability(
+            self, set(["get", "set", "delete", "exists", "reset"]), "DictionaryStorage"
+        )
         self.storage = {}
         self.lock = Lock()
 
@@ -35,7 +36,6 @@ class DictionaryStorage:
             if locked:
                 self.lock.release()
 
-
     def delete(self, name) -> bool:
         locked = False
         try:
@@ -45,7 +45,7 @@ class DictionaryStorage:
             if name not in self.storage:
                 return False
 
-            del(self.storage[name])
+            del self.storage[name]
             return True
         finally:
             if locked:
