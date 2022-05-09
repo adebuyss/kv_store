@@ -41,7 +41,7 @@ $ curl -X GET http://127.0.0.1:8081/test_overwrite
 $ curl -X GET http://127.0.0.1:8081/test_delete
 ```
 
-This will give you a basic status of the tests run. For a more better view of the api calls made, you can view container logs by running:
+This will give you a basic status of the tests run. For a better view of the api calls made, you can view container logs by running:
 
 ```
 $ make logs
@@ -70,10 +70,10 @@ There are various make targets that help with manipulating docker containers her
 ```
 install: Used within docker and will also install pip requirements locally. Requires a python3.8 virtual environment active
 run: Used within docker and will also run kv_store locally. Requires a python3.8 virtual environment active
-docker-build: Will build a docker image for the server
+docker-build: builds a docker image for the server
 docker-run: Runs the docker container for the server
 docker-stop: Stops the container
-docker-remove: Stops and remove the container so the image can be rebuilt
+docker-remove: Stops and removes the container so the image can be rebuilt
 docker-clean: Removes the container and image
 docker-net: Creates the bridge network the conatiners use
 docker-unnet: Removes the docker container and images, and removes the bridge network. Note test_client must already be cleaned.
