@@ -4,7 +4,7 @@ This project is a basic key/value store application witch keeps it's data in mem
 This project requires that you have make and docker installed, and your shell user can run docker commands.
 
 
-Running the kv_store server:
+**Running the kv_store server:**
 
 ```
 $ cd ./src/kv_store
@@ -22,7 +22,7 @@ $ curl -X POST -H "Content-Type: application/json" http://127.0.0.1:8080/v1/ -d 
 $ curl -X PUT -H "Content-Type: application/json" http://127.0.0.1:8080/v1/foo -d '{"value": "bar2"}'
 ```
 
-Running the test server:
+**Running the test server:**
 
 (starting from the project root)
 
@@ -47,7 +47,7 @@ This will give you a basic status of the tests run. For a better view of the api
 $ make logs
 ```
 
-Cleanup:
+**Cleanup:**
 
 To remove the project from docker, you can run the following commands. Order is important.
 
@@ -63,7 +63,7 @@ Next in kv_store
 $ make docker-unnet   (This will execute docker-clean and also remove the bridge network the containers use for communication)
 ```
 
-Errata:
+**Errata:**
 
 There are various make targets that help with manipulating docker containers here is a below is a non-exaustive description of each:
 
