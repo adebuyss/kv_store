@@ -1,0 +1,14 @@
+[flake8]
+ignore = W503, E203
+
+max-line-length = 102
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+
+exclude =
+    .eggs,
+    .vscode,
+    .makefiles,
+    build,
+    dist,
+    venv
